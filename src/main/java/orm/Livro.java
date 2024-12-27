@@ -1,8 +1,14 @@
 package orm;
 
-import java.util.List;
+import jakarta.persistence.Entity;
 
+import java.util.List;
+import java.util.UUID;
+
+@Entity
 public class Livro {
+
+	private UUID id;
 
 	private String nome;
 
@@ -13,6 +19,14 @@ public class Livro {
 	private Integer anoDePublicacao;
 
 	private String resumo;
+
+	public UUID getId() {
+		return id;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
