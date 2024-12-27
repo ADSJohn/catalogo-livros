@@ -2,6 +2,7 @@ package orm;
 
 import jakarta.persistence.Entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -12,7 +13,7 @@ public class Livro {
 
 	private String nome;
 
-	private List<String> autores;
+	private List<String> autores = new ArrayList<>();
 
 	private String editora;
 

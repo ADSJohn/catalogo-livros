@@ -1,5 +1,6 @@
 package dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LivroDto {
@@ -8,11 +9,13 @@ public class LivroDto {
 
 	private String nome;
 
-	private List<String> autores;
+	private List<String> autores = new ArrayList<>();
 
 	private String editora;
 
 	private Integer anoDePublicacao;
+
+	private String resumo;
 
 	public String getId() {
 		return id;
@@ -52,5 +55,13 @@ public class LivroDto {
 
 	public void setAnoDePublicacao(Integer anoDePublicacao) {
 		this.anoDePublicacao = anoDePublicacao;
+	}
+
+	public String getResumo() {
+		return resumo;
+	}
+
+	public void setResumo(String resumo) {
+		this.resumo = resumo;
 	}
 }
