@@ -1,8 +1,16 @@
 package dto;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlRootElement(name = "arg0", namespace = "http://service/")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"id", "nome", "autores", "editora", "anoDePublicacao", "resumo"})
 public class LivroDto {
 
 	private String id;
